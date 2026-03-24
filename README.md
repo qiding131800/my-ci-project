@@ -1,14 +1,13 @@
-# Enterprise CI/CD
+# Enterprise CI/CD Verified
 
-Includes:
-- CI pipeline
-- Release automation
-- Docker build & push
+This repository includes fully verified CI/CD workflows:
+
+- CI build and test (Node.js 20)
+- Docker build & push (Docker Hub)
+- Release automation with automatic zip upload
 
 ## Usage
 
-git push -> CI runs
-
-git tag v1.0.0
-git push origin v1.0.0 -> Release
-
+1. Push code to main branch -> CI runs automatically
+2. Create tag v1.0.0 -> Release workflow runs automatically
+3. Configure Docker secrets for Docker workflow
