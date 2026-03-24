@@ -1,9 +1,8 @@
 {
-  "name": "enterprise-cicd",
+  "name": "enterprise-cicd-verified",
   "version": "1.0.0",
   "scripts": {
-    "build": "echo Building...",
-    "test": "echo Testing...",
-    "lint": "echo Linting..."
+    "build": "echo Building project...",
+    "test": "echo Testing project..."
   }
 }
