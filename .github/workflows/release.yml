@@ -1,4 +1,4 @@
-name: Enterprise Release
+name: Release
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - run: npm ci || npm install
       - run: npm run build --if-present
@@ -26,11 +26,7 @@ jobs:
           mkdir -p release
           cp -r dist release/ || true
           cp -r build release/ || true
-
-      - name: Zip
-        run: |
-          cd release
-          zip -r ../release.zip .
+          cd release && zip -r ../release.zip .
 
       - uses: softprops/action-gh-release@v2
         with:
